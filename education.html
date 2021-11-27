@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Education</title>
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="box">
+	<table>
+		<th><p id=h1>Education Achievements</p><br></th>
+	</table>
+	</div>
+	
+</div>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-md-12">
+				<a id=h1 href="./index.html">HOME </a></div>
+	
+			<div class="col-lg-4 col-md-12">
+				<a id=h1 class="active" href="#home">EDUCATION</a></div>
+		
+			<div class="col-lg-4 col-md-12">
+					<a id=h1 href="./projects.html">PROJECTS</a></div>
+
+			<div class="col-lg-4 col-md-12">
+				<a id=h1 href="./interest.html">INTEREST</a></div>
+
+			<div class="col-lg-4 col-md-12">
+				<a id=h1 href="./contact.html">CONTACT</a></div>
+		</div>
+	</div>
+
+
+
+
+  <p1 style="font-size:25px;" >
+  <h3>O/L Results</h3 >
+  <center>
+</p1>
+<table class="table2">
+  <tr>
+     <th>SUBJECT_NAME</th>
+     <th>GRADE</th>
+  </tr>
+  <tr>
+    <td>Buddhism</td>
+    <td>A</td>
+  </tr>
+   <tr>
+    <td>Sinhala</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td>Mathematics</td>
+    <td>A</td>
+  </tr>
+  <tr>
+      <tr>
+    <td>English</td>
+    <td>A</td>
+  </tr>
+    <tr>
+    <td>Science</td>
+    <td>A</td>
+  </tr>
+    <td>History</td>
+    <td>A</td>
+  </tr>
+  <tr>
+    <td>ICT</td>
+    <td>A</td>
+  </tr>
+   <tr>
+    <td>Tamil</td>
+    <td>C</td>
+  </tr>
+  <tr>
+    <td>English Literature</td>
+    <td>S</td>
+  </tr>
+ 
+  
+   
+  
+</table>
+<h3><p2  style="font-size:40px;">A/L Results</p2></h3>
+
+<table class="table2">
+
+  <tr>
+     <th>SUBJECT_NAME</th>
+     <th>GRADE</th>
+  </tr>
+  <tr>
+    <td>Combined Maths</td>
+    <td>A</td>
+  </tr>
+  <tr>
+    <td>Physics</td>
+    <td>A</td>
+  </tr>
+  <tr>
+    <td>Chemestry</td>
+    <td>B</td>
+  </tr>
+  <tr>
+    <td>Z-Score</td>
+    <td>1.6959</td>
+  </tr>
+  <tr>
+    <td>District</td>
+    <td>Kalutara</td>
+  </tr>
+  <tr>
+  <tr>
+    <td>District Rank</td>
+    <td>68</td>
+  </tr>
+  <tr>
+    <td>Island Rank</td>
+    <td>1469</td>
+  </tr>
+
+</table>
+</center>
+<h3><p2  style="font-size:40px;">Engineering Faculty Courses</p2></h3>
+
+<script>
+    let sortDirection = false;
+    let personData = [
+        {SEMESTER : 1, COURCE_CODE: 'CE 1201',SUBJECT_NAME :'Properties of Materials',GRADE:'B',VALIDE :6 },
+        {SEMESTER : 1, COURCE_CODE: 'CO 1201',SUBJECT_NAME :'Introduction to Computer System',GRADE:'B+',VALIDE :7},
+        {SEMESTER : 1, COURCE_CODE: 'EE 1201',SUBJECT_NAME :'Electrical',GRADE:'B',VALIDE :6},
+        {SEMESTER : 1, COURCE_CODE: 'ME 1301',SUBJECT_NAME :'Engineering Machanics',GRADE:'B',VALIDE :6 },
+        {SEMESTER : 1, COURCE_CODE: 'ME 1202',SUBJECT_NAME :'Introduction to Thermodynamics',GRADE:'C+',VALIDE :4},
+        {SEMESTER : 1, COURCE_CODE: 'IS 1301',SUBJECT_NAME :'Mathematics',GRADE:'B',VALIDE :6},
+        {SEMESTER : 1, COURCE_CODE: 'IS 1151',SUBJECT_NAME :'English for Communication',GRADE:'B+',VALIDE :7},
+        {SEMESTER : 1, COURCE_CODE: 'IS 1171',SUBJECT_NAME :'History of Science and Technology',GRADE:'C+',VALIDE :4},
+        {SEMESTER : 1, COURCE_CODE: 'IS 1281',SUBJECT_NAME :'Engineering Measurement',GRADE:'B',VALIDE :6},
+        //**********************************************************************************************************
+        {SEMESTER : 2, COURCE_CODE: 'CE 1202',SUBJECT_NAME :'Introduction to Fluid Mechanics',GRADE:'C+',VALIDE :4 },
+        {SEMESTER : 2, COURCE_CODE: 'CO 1302',SUBJECT_NAME :'Programming for Engineers',GRADE:'A-',VALIDE :8},
+        {SEMESTER : 2, COURCE_CODE: 'EE 1302',SUBJECT_NAME :'Electronics',GRADE:'B',VALIDE :6},
+        {SEMESTER : 2, COURCE_CODE: 'ME 1303',SUBJECT_NAME :'Basic Manufacturing Processes',GRADE:'B',VALIDE :6 },
+        {SEMESTER : 2, COURCE_CODE: 'ME 1304',SUBJECT_NAME :'Engineering Drawing',GRADE:'B+',VALIDE :7},
+        {SEMESTER : 2, COURCE_CODE: 'IS 1302',SUBJECT_NAME :'Engineering Mathematics II',GRADE:'C+',VALIDE :4},
+        {SEMESTER : 2, COURCE_CODE: 'IS 1152',SUBJECT_NAME :'Presentation Skills English',GRADE:'A-',VALIDE :8},
+       //*****************************************************************************
+     
+    ];
+    window.onload = () => {
+        loadTableData(personData);
+    }
+    function loadTableData(personData) {
+        const tableBody = document.getElementById('tableData');
+        let dataHtml = '';
+
+        for (let person of personData) {
+            dataHtml += `<tr><td>${person.SEMESTER}</td><td>${person.COURCE_CODE}</td><td>${person.SUBJECT_NAME}</td><td>${person.GRADE}</tb></tr>`;
+        }
+        tableBody.innerHTML = dataHtml;
+    }
+    function sortColumn(columnName,dataType) {
+        sortDirection = !sortDirection;
+        switch (dataType) {
+            case "string":
+                sortNumberColumn(sortDirection, columnName);
+                break;
+            case "number":
+                sortNumberColumn(sortDirection, columnName);
+                break;
+            default:
+        }
+        loadTableData(personData);
+    }
+    function sortNumberColumn(sort, columnName) {
+        personData = personData.sort((p1, p2) => {
+            return sort ? p1[columnName] - p2[columnName] : p2[columnName] - p1[columnName]
+        });
+    }
+
+  function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById('tableData');
+  switching = true;
+  dir = "asc"; 
+  while (switching) {
+    switching = false;
+    rows = table.rows;
+    for (i = 0; i < (rows.length - 1); i++) {
+      shouldSwitch = false;
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      switchcount ++;      
+    } else {
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+<center>
+<table class="table1">
+        <thread>
+            <tr class="th1">
+                <th onclick="sortColumn('SEMESTER','number')">SEMESTER</th>
+                <th class="th1" onclick="sortTable(1)">COURCE_CODE</th>
+                <th class="th1" onclick="sortTable(2)">SUBJECT_NAME</th>
+                <th class="th1" onclick="sortColumn('VALIDE','number')">GRADE</th>
+            </tr>
+        </thread>
+        <tbody id="tableData"></tbody>
+    </table>
+</center>
+</body>
+
+
+</html>
